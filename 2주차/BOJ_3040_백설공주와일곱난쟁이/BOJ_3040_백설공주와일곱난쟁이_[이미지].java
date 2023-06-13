@@ -6,7 +6,6 @@ import java.util.Collections;
 import java.util.List;
 
 public class Main {
-
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
@@ -31,7 +30,7 @@ public class Main {
 				
 				if(sortedList.get(i) + sortedList.get(j) == sumOfTwo) { // 두 난쟁이 찾았으면,
 					idx1 = list.indexOf(sortedList.get(i)); //list에서 난쟁이1의 index
-          idx2 = list.indexOf(sortedList.get(j)); //list에서 난쟁이2의 index
+          				idx2 = list.indexOf(sortedList.get(j)); //list에서 난쟁이2의 index
 					list.set(idx1, -1); //난쟁이1
 					list.set(idx2, -1); //난쟁이2
 
@@ -39,7 +38,7 @@ public class Main {
 					for(Integer num : list) { 
 						if(num > 0)
 							System.out.println(num);
-          }
+          				}
                     
 					return;
 				}
