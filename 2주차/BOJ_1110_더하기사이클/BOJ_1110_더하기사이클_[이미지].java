@@ -15,7 +15,6 @@ public class Main {
             b = N%10; //b : 1의자리
             
             N = newN = (a+b<10) ? (b*10 + (a+b)) : (b*10 + (a+b)%10);
-                
             cycle++;
         }while(input != newN);
         
