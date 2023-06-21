@@ -24,17 +24,15 @@ public class BOJ_2204 {
 			//단어 입력
 			for (int i = 0; i < N; i++)
 				list.add(br.readLine());
-			
-			//가장 빠른 단어 찾기
-			first = list.get(0);
-			for (int i = 0; i < list.size(); i++) {
-				for (int j = 0; j < list.size(); j++) {
-					if(first.compareToIgnoreCase(list.get(j)) > 0)
-						first = list.get(j);
-				}
-			}
-			
-			resList.add(first);
+				
+		         //가장 빠른 단어 찾기
+		         first = list.get(0);
+		         for (int i = 1; i < list.size(); i++) {
+		               if(first.compareToIgnoreCase(list.get(i)) > 0)
+		                  first = list.get(i);
+		         }
+		         list.clear();
+		         resList.add(first);
 		}
 		
 		resList.forEach(s -> System.out.println(s));
