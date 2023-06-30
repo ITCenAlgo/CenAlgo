@@ -48,7 +48,7 @@ public class BOJ_4383_점프는즐거워_이미지 {
 			else
 				System.out.println("Not jolly");
             
-            isJolly = true; //flag 초기화
+            		isJolly = true; //flag 초기화
 		}
 	}
 }
