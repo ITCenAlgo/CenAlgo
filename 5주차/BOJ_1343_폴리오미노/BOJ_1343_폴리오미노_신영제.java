@@ -9,7 +9,7 @@ import java.io.InputStreamReader;
 2. XXXX가 있다면 AAAA로 변환시킨다.
 3. 변환 후 XX가 있다면 BB로 변환시킨다.
  */
-public class BOJ_1343_폴리오미노 {
+public class BOJ_1343_폴리오미노_신영제 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
