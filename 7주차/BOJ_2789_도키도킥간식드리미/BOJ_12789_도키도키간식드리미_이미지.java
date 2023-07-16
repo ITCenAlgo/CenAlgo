@@ -8,7 +8,6 @@ import java.util.StringTokenizer;
 
 public class BOJ_12789_도키도키간식드리미_이미지 {
 	public static Stack<Integer> stack = new Stack<>(); 
-	public static int order = 1;
 	
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -17,30 +16,22 @@ public class BOJ_12789_도키도키간식드리미_이미지 {
 		int N = Integer.parseInt(br.readLine());
 		st = new StringTokenizer(br.readLine());
 		
+		int order = 1;
 		while(true) {
-			if(st.hasMoreTokens()) {
-				stack.push(Integer.parseInt(st.nextToken()));
-				
-				int size = stack.size();
-				for (int i = 0; i < size; i++) {
-					if(stack.isEmpty())
-						break;
-					
-					if(stack.peek() == order) {
-						stack.pop();
-						order++;
-					}
-					else
-						break;
-				}
+			if(!st.hasMoreTokens()) break;
+
+			stack.push(Integer.parseInt(st.nextToken()));
+			
+			int size = stack.size();
+			for (int i = 0; i < size; i++) {
+				if(stack.isEmpty()) break;
+				if(stack.peek() != order) break;
+
+				stack.pop();
+				order++;
 			}
-			else
-				break;
 		}
 
-		if(stack.isEmpty())
-			System.out.println("Nice");
-		else
-			System.out.println("Sad");
+		System.out.println(stack.isEmpty() ? "Nice" : "Sad");
 	}
 }
